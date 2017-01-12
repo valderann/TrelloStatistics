@@ -1,0 +1,61 @@
+﻿.button-green{
+    background: linear-gradient(to bottom, #5aac44 0, #519839 100%);
+    color: #fff;
+}
+
+body {
+padding-top:0;
+}
+section { height: 100vh; }
+
+.chart {
+     width:900px;
+     height:800px;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+.headerTask {
+    margin-top:30px;
+    margin-bottom:15px;
+    border-bottom:1px solid #ccc;
+}
+.headerTask > div {
+float:left;
+margin:5px;
+}
+
+
+#toTop
+{
+	padding:10px;
+	color:#fff;
+	background-color: rgba(0, 0, 0, 0.3);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaaaaa, endColorstr=#aaaaaa)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aaaaaa, endColorstr=#aaaaaa);
+	position:fixed;
+	bottom:15px;
+	right:20px;
+	width:10px;
+	height:10px;
+	border:1px solid #CCC;
+	cursor:pointer;
+	font-size:16px;
+	font-weight:bold;
+	display:none;
+	z-index:3;
+}
+.boardButton {
+    height:40px;
+    border: 1px solid #ccc;
+    margin:10px;
+    padding:5px;
+    background-color: #eee;
+    float:left;
+    width:30%;
+    cursor:pointer;
+
+}

@@ -1,0 +1,58 @@
+﻿body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+}
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption {
+    z-index: 10 !important;
+}
+
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        z-index: 10 !important;
+    }
+}
+
+
+.landing-connect{background:#428bca;padding-top:20px;color:whitesmoke}
+.landing-connect a.btn{margin-top:20px}
+.landing-connect .small{margin-top:5px;font-size:75%}
+.landing-connect .small a{color:paleturquoise}
+.landing-connect .small a:hover{color:#FFF}
+.landing-connect .row:last-child{padding-bottom:57px}
+.landing-section{padding-bottom:70px;padding-top:60px}                                                                                                                                                                                                                                                                                                               .landing-section .row{padding-bottom:10px}
+.landing-info{background:#F2F2F2}
+
+.navbar-default.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.navbar-brand, .navbar-nav > li > a {
+color:#fff !important;
+}

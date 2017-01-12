@@ -1,0 +1,122 @@
+﻿@{
+    ViewData["Title"] = "TrelloStatistics";
+}
+
+<section class='landing-connect'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 text-center'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 text-center h1'>
+                Analyze your Trello boards
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-12 text-center h4'>
+                Free and unlimited
+            </div>
+        </div>
+        <div class='row'>
+            <div class='text-center'>
+                <a class='btn btn-primary btn-xl connect-btn button-green' id="processTrelloFile" href='javascript:void(0)'>
+                    Upload json file
+                </a><br/><br/>
+                --OR--
+                <br/>
+                <a class='btn btn-primary btn-xl connect-btn button-green' id="processTrelloApiButton">
+                    Authenticate with trello
+                </a>
+                <input style="display:none" type="file" id="trelloJsonFile" name="trelloJsonFile" />
+            </div>
+        </div>
+    </div>
+</section>
+<div id="boardsTemplate"  style="display:none">
+    <section>
+        <div class='row'>
+            <div class='col-xs-12 text-center h1'>
+                Boards
+            </div>
+            <div class='col-xs-6 center'>
+                <div data-bind="foreach: boards">
+                    <div class="boardButton" data-bind="text: name, attr: {'data-id': id}"></div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+</div>
+ <div id="cardsTemplate" style="display:none">
+        <section class="container">
+            <div class='row'>
+                <div class='col-sm-6 col-md-6 text-center h1'>
+                    Statistics for <span data-bind="text: boardName"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-xs-6 center'>
+                    <label for="periodDropdown">Period: </label>
+                    <select id="periodDropdown"></select>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-6 col-md-6 text-center h2'>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-6 col-md-6'>
+                    <canvas id="piechartUser" class="chart"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class='row'>
+                <div class='col-xs-12 text-center h1'>
+                    Users
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-6 col-md-6'>
+                    <canvas id="areachart" class="chart"></canvas>
+                </div>
+            </div>
+        </section>
+         <section class="container">
+             <div class='row'>
+                 <div class='col-sm-6 col-md-6 text-center h1'>
+                    Swimlane
+                 </div>
+             </div>
+             <div class='row'>
+                 <div class='col-sm-6 col-md-6'>
+                     <canvas id="piechartSwimlane" class="chart"></canvas>
+                 </div>
+             </div>
+         </section>
+        <section class="container">
+            <div class='row'>
+                <div class='col-sm-6 col-md-6 text-center h1'>
+                    Tasks
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-6 col-md-6 center'>
+                    <div data-bind="foreach: tasks">
+                        <div data-bind="if: userTasks">
+                            <div class="headerTask">
+                                <div databind="if icon"><img width="30" height="30" data-bind="attr:{src: icon}" /></div>
+                                <div class="h4 headerUsername" data-bind="text: userName"></div>
+                                <br style="clear:both" />
+                            </div>
+                            <ul data-bind="foreach: userTasks">
+                                <li><a href="" target="_blank" data-bind="text: title, attr: {href: url}"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="toTop"></div>
